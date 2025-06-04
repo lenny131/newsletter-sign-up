@@ -1,0 +1,169 @@
+@use "presets";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    color: presets.$color-blue-800;
+    background-color: presets.$color-blue-700;
+    @include presets.text-regular;
+    //text-wrap: pretty;
+}
+
+main {
+    flex-basis: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    @include presets.text-heading;
+}
+
+button {
+    @include presets.text-bold;
+    background-color: presets.$color-blue-800;
+    color: presets.$color-white;
+    padding-block: presets.spacing(200);
+    border: none;
+    border-radius: 0.5rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.sign-up-component {
+    background-color: presets.$color-white;
+    width: 23.4375rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: presets.spacing(500);
+
+    .illustration img {
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
+        margin-inline: presets.spacing(300);
+        margin-block-end: presets.spacing(500);
+        display: flex;
+        flex-direction: column;
+        gap: presets.spacing(500);
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: presets.spacing(300);
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: presets.spacing(100);
+        }
+
+        li {
+            padding-inline-start: 2.5rem;
+            list-style: none;
+            background: url("../assets/images/icon-list.svg") no-repeat left top;
+        }
+    }
+
+    .field {
+        display: flex;
+        flex-direction: column;
+        gap: presets.spacing(100);
+
+        .label-and-error {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            @include presets.text-label;
+
+            span {
+                color: presets.$color-red-500;
+            }
+        }
+
+        input {
+            @include presets.text-regular;
+            padding-inline: presets.spacing(300);
+            padding-block: presets.spacing(200);
+            border: 0.0625rem solid presets.$color-grey;
+            border-radius: 0.5rem;
+
+            &[data-invalid] {
+                background-color: presets.$color-red-100;
+            }
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: presets.spacing(300);
+    }
+}
+
+.attribution {
+    font-size: 0.7rem;
+    text-align: center;
+    color: presets.$color-white;
+
+    a {
+        color: presets.$color-grey;
+    }
+}
+
+.success-dialog {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    border: none;
+    color: presets.$color-blue-800;
+    background-color: presets.$color-white;
+}
+
+.dialog-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-inline: presets.spacing(300);
+    padding-block-start: presets.spacing(1500);
+    padding-block-end: presets.spacing(500);
+}
+
+.success-message {
+    display: flex;
+    flex-direction: column;
+    gap: presets.spacing(400);
+}
+
+/*
+@media (min-width: presets.$screen-size-tablet) {
+    main {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-block: 1rem;
+    }
+}
+*/
