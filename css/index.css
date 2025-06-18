@@ -162,8 +162,7 @@ button:hover {
   color: hsl(234, 29%, 20%);
   background-color: hsl(0, 100%, 100%);
 }
-
-.dialog-container {
+.success-dialog .dialog-container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -173,23 +172,46 @@ button:hover {
   padding-block-start: 7.5rem;
   padding-block-end: 2.5rem;
 }
-
-.success-message {
+.success-dialog .success-message {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-/*
-@media (min-width: presets.$screen-size-tablet) {
-    main {
-        flex-grow: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-block: 1rem;
-    }
+@media (min-width: 48em) {
+  main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 1rem;
+  }
+  .sign-up-component {
+    width: 38rem;
+    height: revert;
+    border-radius: 2.25rem;
+    padding: 2.5rem;
+  }
+  .sign-up-component .illustration img {
+    border-radius: 1.25rem;
+  }
+  .sign-up-component .content {
+    margin: 0;
+  }
+  .success-dialog {
+    width: 31.5rem;
+    height: revert;
+    border-radius: 2.25rem;
+    margin: auto;
+    padding: 4rem;
+  }
+  .success-dialog::backdrop {
+    background-color: hsl(235, 18%, 26%);
+  }
+  .success-dialog .dialog-container {
+    padding: 0;
+    gap: 2rem;
+  }
 }
-*/
 
 /*# sourceMappingURL=index.css.map */
