@@ -137,26 +137,25 @@ button {
     border: none;
     color: presets.$color-blue-800;
     background-color: presets.$color-white;
+
+    .dialog-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-inline: presets.spacing(300);
+        padding-block-start: presets.spacing(1500);
+        padding-block-end: presets.spacing(500);
+    }
+
+    .success-message {
+        display: flex;
+        flex-direction: column;
+        gap: presets.spacing(400);
+    }
 }
 
-.dialog-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-inline: presets.spacing(300);
-    padding-block-start: presets.spacing(1500);
-    padding-block-end: presets.spacing(500);
-}
-
-.success-message {
-    display: flex;
-    flex-direction: column;
-    gap: presets.spacing(400);
-}
-
-/*
 @media (min-width: presets.$screen-size-tablet) {
     main {
         flex-grow: 1;
@@ -165,5 +164,36 @@ button {
         justify-content: center;
         padding-block: 1rem;
     }
+
+    .sign-up-component {
+        width: 38rem;
+        height: revert;
+        border-radius: 2.25rem;
+        padding: presets.spacing(500);
+
+        .illustration img {
+            border-radius: 1.25rem;
+        }
+
+        .content {
+            margin: 0;
+        }
+    }
+
+    .success-dialog {
+        width: 31.5rem;
+        height: revert;
+        border-radius: 2.25rem;
+        margin: auto;
+        padding: presets.spacing(800);
+
+        &::backdrop {
+            background-color: presets.$color-blue-700;
+        }
+
+        .dialog-container {
+            padding: 0;
+            gap: presets.spacing(400);
+        }
+    }
 }
-*/
