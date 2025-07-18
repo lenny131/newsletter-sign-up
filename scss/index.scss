@@ -197,3 +197,26 @@ button {
         }
     }
 }
+
+@media (min-width: presets.$screen-size-desktop) {
+    .sign-up-component {
+        width: fit-content;
+        flex-direction: row-reverse;
+        gap: presets.spacing(800);
+        padding: presets.spacing(400);
+        align-items: center;
+
+        .illustration img {
+            width: 25rem;
+            border-radius: 0;
+        }
+
+        .content {
+            width: 23.5rem;
+        }
+    }
+
+    button:active {
+        background-image: linear-gradient(to right, hsl(15, 100%, 61%), hsl(346, 100%, 66%));
+    }
+}
